@@ -1,16 +1,16 @@
 import React from "react";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./profile.css";
+
 function Profile() {
   const params = useParams();
-  console.log(params);
   const [jobs, setJobs] = useState([]);
   const [refresh, setRefresh] = useState(false);
 
   const getCurrentCompany = async () => {
     const response = await fetch(
-      `https://strive-jobs-api.herokuapp.com/jobs?company=${params.name}`
+      `https://strive-jobs-api.herokuapp.com/jobs?company=${params.company}`
     );
     if (response.ok) {
       const data = await response.json();
@@ -18,6 +18,7 @@ function Profile() {
       setRefresh(true);
     }
   };
+  // console.log(params);
 
   useEffect(() => {
     getCurrentCompany();

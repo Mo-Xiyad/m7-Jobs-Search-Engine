@@ -17,7 +17,7 @@ export default function Home({ data, getSearchedData }) {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div className="well search-result">
                   <div className="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
-                    <Link to={`profile/${result.company_name}`}>
+                    <Link to={`jobLists/${result.company_name}`}>
                       <h3>{result.title}</h3>
                       {/* <h3>{result._id}</h3> */}
                     </Link>

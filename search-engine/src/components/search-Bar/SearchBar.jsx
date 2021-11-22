@@ -1,10 +1,14 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import "./search-bar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function SearchBar({ getSearchedData }) {
   const [query, setQuery] = useState();
+
+  useEffect(() => {
+    getSearchedData(query);
+  }, [query]);
 
   return (
     <div>
@@ -17,6 +21,7 @@ function SearchBar({ getSearchedData }) {
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
+                // getSearchedData(query);
               }}
               placeholder="Search..."
             />
