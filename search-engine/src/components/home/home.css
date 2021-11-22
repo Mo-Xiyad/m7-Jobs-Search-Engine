@@ -1,51 +1,24 @@
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #264d5c !important;
+.search-result .title h3 {
+  margin: 0 0 15px;
+  color: #333;
 }
-
-.searchbar {
-  margin-bottom: auto;
-  margin-top: 10%;
-  height: 60px;
-  background-color: #353b48;
-  border-radius: 30px;
-  padding: 10px;
+.search-result .title p {
+  font-size: 12px;
+  color: #333;
 }
-
-.search_input {
-  color: white;
+.well {
   border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  caret-color: transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-}
-
-.searchbar:hover > .search_input {
-  padding: 0 10px;
-  width: 450px;
-  caret-color: red;
-  transition: width 0.4s linear;
-}
-
-.searchbar:hover > .search_icon {
-  background: white;
-  color: #e74c3c;
-}
-
-.search_icon {
-  height: 40px;
-  width: 40px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
-  text-decoration: none;
+  padding: 20px;
+  min-height: 63px;
+  background: rgba(221, 238, 245, 0.459);
+  box-shadow: none;
+  border-radius: 3px;
+  position: relative;
+  max-height: 100000px;
+  border-bottom: 2px solid #ccc;
+  transition: max-height 0.5s ease;
+  -o-transition: max-height 0.5s ease;
+  -ms-transition: max-height 0.5s ease;
+  -moz-transition: max-height 0.5s ease;
+  -webkit-transition: max-height 0.5s ease;
 }
